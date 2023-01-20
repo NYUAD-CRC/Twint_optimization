@@ -30,7 +30,7 @@ def configure_twint(start_date, end_date, search_term):
     c.Lang = "en"        # Language
     c.Pandas = True
     c.Store_csv = True
-    c.Output = "tweets_test_4days.csv"
+    c.Output = "tweets_test_10_days.csv"
     c.Search = search_term  # key words to look for.
     return c
 
