@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "4_days.py", line 37, in <module>
+    tweets_df = results.result()
+  File "/scratch/ms13779/conda-envs/twitter/lib/python3.8/concurrent/futures/_base.py", line 444, in result
+    return self.__get_result()
+  File "/scratch/ms13779/conda-envs/twitter/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/scratch/ms13779/conda-envs/twitter/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "4_days.py", line 13, in search_twint
+    twint.run.Search(c)
+  File "/scratch/ms13779/conda-envs/twitter/lib/python3.8/site-packages/twint/run.py", line 410, in Search
+    run(config, callback)
+  File "/scratch/ms13779/conda-envs/twitter/lib/python3.8/site-packages/twint/run.py", line 329, in run
+    get_event_loop().run_until_complete(Twint(config).main(callback))
+  File "/scratch/ms13779/conda-envs/twitter/lib/python3.8/site-packages/twint/run.py", line 38, in __init__
+    self.d = datelock.Set(self.config.Until, self.config.Since)
+  File "/scratch/ms13779/conda-envs/twitter/lib/python3.8/site-packages/twint/datelock.py", line 36, in Set
+    d.since = datetime.datetime.strptime(convertToDateTime(Since), "%Y-%m-%d %H:%M:%S")
+  File "/scratch/ms13779/conda-envs/twitter/lib/python3.8/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/scratch/ms13779/conda-envs/twitter/lib/python3.8/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '2022-12_29 00:00:00' does not match format '%Y-%m-%d %H:%M:%S'
